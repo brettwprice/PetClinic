@@ -2,7 +2,7 @@
 Description=Petclinic Daemon
 
 [Service]
-ExecStart=/usr/lib/jvm/jre-1.8.0/bin/java -jar /opt/remoteFiles/appPackage/spring-petclinic-1.5.1.jar
+ExecStart=/usr/lib/jvm/jre-1.8.0/bin/java -jar /opt/remoteFiles/appPackage/spring-petclinic.jar
 User=root
 
 [Install]
