@@ -1,6 +1,7 @@
 #ver 7
+sudo yum install mesa-libGL.x86_64 mesa-libEGL.x86_64 -y
 
-sudo yum update -y 
+sudo yum update -y --skip-broken
 sudo yum install jre-1.8.0 -y
 echo "$(date) INFO: petclinic Starting Service..." 
 
