@@ -1,4 +1,6 @@
 #ver 7
+#Adding comment please ignore
+
 sudo yum install mesa-libGL.x86_64 mesa-libEGL.x86_64 -y
 
 sudo yum update -y --skip-broken
