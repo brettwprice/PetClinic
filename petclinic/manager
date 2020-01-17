@@ -1,15 +1,15 @@
 #ver 7
 
-yum update -y 
-yum install jre-1.8.0 -y
+sudo yum update -y 
+sudo yum install jre-1.8.0 -y
 echo "$(date) INFO: petclinic Starting Service..." 
 
-firewall-cmd --zone=public --add-port=8080/tcp
-firewall-cmd --zone=public --add-port=80/tcp
-firewall-cmd --zone=public --add-port=443/tcp
+sudo firewall-cmd --zone=public --add-port=8080/tcp
+sudo firewall-cmd --zone=public --add-port=80/tcp
+sudo firewall-cmd --zone=public --add-port=443/tcp
 
-mv /opt/remoteFiles/appPackage/petclinic.service /usr/lib/systemd/system/
-systemctl daemon-reload
-systemctl enable petclinic.service 
-systemctl start petclinic.service 
+sudo mv /opt/remoteFiles/appPackage/petclinic.service /usr/lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable petclinic.service 
+sudo systemctl start petclinic.service 
 
