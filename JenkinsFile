@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh 'rm PetClinic/ -r -f'
+                sh 'git clone https://github.com/brettwprice/PetClinic.git'
+                sh 'ls'
+                sh '/tmp/maven/apache-maven-3.6.3/bin/mvn package -f "$WORKSPACE/PetClinic/pom.xml"'
+                sh '7za a -tzip "petclinic.zip" "$WORKSPACE/PetClinic/*"'
+              
+            }
+        }
+    }
+}
